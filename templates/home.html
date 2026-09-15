@@ -1,0 +1,644 @@
+{% load static %}
+
+
+<!doctype html>
+<html lang="ky">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Кыргызстандын облустары</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f5f6fa;
+        }
+
+        /* NAVBAR */
+        .navbar-brand {
+            font-size: 1.3rem;
+        }
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(135deg, #dc3545, #8b0000);
+            color: white;
+            padding: 100px 0;
+        }
+
+        .hero h1 {
+            text-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+        }
+
+        .hero .btn {
+            border-radius: 30px;
+            padding: 12px 30px;
+            font-weight: 600;
+        }
+
+        /* REGION CARDS */
+        .region-card {
+            transition: 0.3s ease;
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .region-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .region-image {
+            height: 220px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .region-card .card-body {
+            padding: 25px;
+        }
+
+        .region-card .btn {
+            border-radius: 8px;
+        }
+
+        /* ABOUT */
+        .about-box {
+            transition: 0.3s;
+        }
+
+        .about-box:hover {
+            transform: scale(1.02);
+        }
+
+        /* CONTACT */
+        .contact-form {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        /* FOOTER */
+        footer {
+            background: #212529;
+            color: white;
+        }
+
+        /* SMOOTH SCROLL */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+
+        <div class="container">
+
+            <a class="navbar-brand fw-bold" href="{% url 'home' %}">
+                🇰🇬 Кыргызстан
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+                aria-controls="navbarMenu" aria-expanded="false" aria-label="Меню">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{% url 'home' %}">
+                            Башкы бет
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#regions">
+                            Облустар
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">
+                            Биз жөнүндө
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">
+                            Байланыш
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <div class="container text-center">
+
+            <h1 class="display-4 fw-bold">
+                Кыргызстандын 7 облусу
+            </h1>
+
+            <p class="lead mt-3">
+                Кыргызстандын кооз аймактары менен таанышыңыз
+            </p>
+
+            <a href="#regions" class="btn btn-light btn-lg mt-3">
+                Облустарды көрүү
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= REGIONS ================= -->
+
+    <section id="regions" class="py-5">
+
+        <div class="container">
+
+            <div class="text-center mb-5">
+
+                <h2 class="fw-bold">
+                    Кыргызстандын облустары
+                </h2>
+
+                <p class="text-muted">
+                    Ар бир облустун өзүнүн тарыхы, маданияты жана кооз жерлери бар.
+                </p>
+
+            </div>
+
+
+            <div class="row g-4">
+
+
+                <!-- ================= БАТКЕН ================= -->
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="card region-card h-100">
+
+                        <img src="https://sputnik.kg/img/104654/35/1046543501_0:18:3069:1744_1920x0_80_0_0_ce38e5d48cd768898c78058de61c7add.jpg"
+                            class="card-img-top region-image" alt="Баткен облусу">
+
+                        <div class="card-body">
+
+                            <span class="badge bg-danger mb-2">
+                                Облус №1
+                            </span>
+
+                            <h4 class="card-title fw-bold">
+                                Баткен облусу
+                            </h4>
+
+                            <p class="card-text text-muted">
+                                Кыргызстандын түштүк-батышында жайгашкан.
+                                Өзүнүн тоолору, өрөөндөрү жана тарыхый жерлери
+                                менен белгилүү.
+                            </p>
+
+                            <a href="{% url 'batken' %}" class="btn btn-outline-danger">
+                                Толук маалымат
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================= ОШ ================= -->
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="card region-card h-100">
+
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5SKg62l3jy4k9uNpexG8--OxyLpi2ezEg1ZMDdVb4Xg&s=10"
+                            class="card-img-top region-image" alt="Ош облусу">
+
+                        <div class="card-body">
+
+                            <span class="badge bg-danger mb-2">
+                                Облус №2
+                            </span>
+
+                            <h4 class="card-title fw-bold">
+                                Ош облусу
+                            </h4>
+
+                            <p class="card-text text-muted">
+                                Кыргызстандын түштүгүндөгү тарыхый аймак.
+                                Бай маданияты жана кооз жаратылышы менен
+                                айырмаланат.
+                            </p>
+
+                            <a href="{% url 'osh' %}" class="btn btn-outline-danger">
+                                Толук маалымат
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================= ЖАЛАЛ-АБАД ================= -->
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="card region-card h-100">
+
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbEQ9DiIpg_AWQi-EYcLmipWCdbH8PkbSkQGIwmYwmtA&s=10"
+                            class="card-img-top region-image" alt="Жалал-Абад облусу">
+
+                        <div class="card-body">
+
+                            <span class="badge bg-danger mb-2">
+                                Облус №3
+                            </span>
+
+                            <h4 class="card-title fw-bold">
+                                Жалал-Абад облусу
+                            </h4>
+
+                            <p class="card-text text-muted">
+                                Табигый кооз жерлерге жана тоолорго бай аймак.
+                                Курорттук жана тарыхый жайлары көп.
+                            </p>
+
+                            <a href="{% url 'jalal_abad' %}" class="btn btn-outline-danger">
+                                Толук маалымат
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================= НАРЫН ================= -->
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="card region-card h-100">
+
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlc9qM2xnx77WSGY_nbNwo733qa5rIuCOBi4grvuyBng&s=10"
+                            class="card-img-top region-image" alt="Нарын облусу">
+
+                        <div class="card-body">
+
+                            <span class="badge bg-danger mb-2">
+                                Облус №4
+                            </span>
+
+                            <h4 class="card-title fw-bold">
+                                Нарын облусу
+                            </h4>
+
+                            <p class="card-text text-muted">
+                                Бийик тоолору жана кооз өрөөндөрү менен
+                                белгилүү болгон аймак.
+                            </p>
+
+                            <a href="{% url 'naryn' %}" class="btn btn-outline-danger">
+                                Толук маалымат
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================= ЫССЫК-КӨЛ ================= -->
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="card region-card h-100">
+
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToJ1joBBvXbdlVOFk2RSRPKHhiIBgKdfiK2UzZ-hvYwA&s=10"
+                            class="card-img-top region-image" alt="Ысык-Көл облусу">
+
+                        <div class="card-body">
+
+                            <span class="badge bg-danger mb-2">
+                                Облус №5
+                            </span>
+
+                            <h4 class="card-title fw-bold">
+                                Ысык-Көл облусу
+                            </h4>
+
+                            <p class="card-text text-muted">
+                                Дүйнөгө белгилүү Ысык-Көлү жайгашкан аймак.
+                                Туризм үчүн эң популярдуу жерлердин бири.
+                            </p>
+
+                            <a href="{% url 'ysyk_kol' %}" class="btn btn-outline-danger">
+                                Толук маалымат
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================= ТАЛАС ================= -->
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="card region-card h-100">
+
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrkGZWMuks_oyhOgDSfkWTEKBQMTnLXZmkoZRkOxJOlw&s=10"
+                            class="card-img-top region-image" alt="Талас облусу">
+
+                        <div class="card-body">
+
+                            <span class="badge bg-danger mb-2">
+                                Облус №6
+                            </span>
+
+                            <h4 class="card-title fw-bold">
+                                Талас облусу
+                            </h4>
+
+                            <p class="card-text text-muted">
+                                Манас эпосу менен тыгыз байланышкан тарыхый
+                                аймак. Табияты да абдан кооз.
+                            </p>
+
+                            <a href="{% url 'talas' %}" class="btn btn-outline-danger">
+                                Толук маалымат
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================= ЧҮЙ ================= -->
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="card region-card h-100">
+
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNw7DCIYM89PY6kso9gNEm4C9dkeqoCSSUCsCDYS39Bw&s=10"
+                            class="card-img-top region-image" alt="Чүй облусу">
+
+                        <div class="card-body">
+
+                            <span class="badge bg-danger mb-2">
+                                Облус №7
+                            </span>
+
+                            <h4 class="card-title fw-bold">
+                                Чүй облусу
+                            </h4>
+
+                            <p class="card-text text-muted">
+                                Кыргызстандын түндүгүндөгү маанилүү аймак.
+                                Борбор шаар Бишкек ушул аймакта жайгашкан.
+                            </p>
+
+                            <a href="{% url 'chuy' %}" class="btn btn-danger">
+                                Чүй облусун көрүү
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section id="about" class="py-5 bg-white">
+
+        <div class="container">
+
+            <div class="row align-items-center">
+
+                <div class="col-lg-6">
+
+                    <h2 class="fw-bold mb-4">
+                        Кыргызстан жөнүндө
+                    </h2>
+
+                    <p class="text-muted">
+                        Кыргызстан — Борбордук Азияда жайгашкан тоолуу мамлекет.
+                        Өлкө өзүнүн кооз жаратылышы, бийик тоолору,
+                        көлдөрү жана бай тарыхы менен белгилүү.
+                    </p>
+
+                    <p class="text-muted">
+                        Кыргызстандын ар бир облусунун өзүнүн өзгөчөлүгү,
+                        маданияты жана тарыхы бар.
+                    </p>
+
+                    <p class="text-muted">
+                        Бул сайт аркылуу Кыргызстандын 7 облусу жөнүндө
+                        негизги маалыматтарды көрүп, ар бир аймактын
+                        өзгөчөлүктөрү менен тааныша аласыз.
+                    </p>
+
+                </div>
+
+
+                <div class="col-lg-6">
+
+                    <div class="about-box p-5 bg-light rounded-4 text-center">
+
+                        <h1 class="display-1">
+                            🇰🇬
+                        </h1>
+
+                        <h3 class="fw-bold">
+                            Кыргызстан
+                        </h3>
+
+                        <p class="text-muted mb-0">
+                            Борбордук Азиянын бермети
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section id="contact" class="py-5">
+
+        <div class="container">
+
+            <div class="text-center mb-4">
+
+                <h2 class="fw-bold">
+                    Байланыш
+                </h2>
+
+                <p class="text-muted">
+                    Биз менен байланышуу үчүн маалыматтарыңызды калтырыңыз.
+                </p>
+
+            </div>
+
+
+            <div class="row justify-content-center">
+
+                <div class="col-lg-6">
+
+                    <div class="contact-form">
+
+                        <form method="POST">
+
+                            {% csrf_token %}
+
+                            <div class="mb-3">
+
+                                <label class="form-label fw-semibold">
+                                    Атыңыз
+                                </label>
+
+                                <input type="text" name="name" class="form-control" placeholder="Атыңызды жазыңыз"
+                                    required>
+
+                            </div>
+
+
+                            <div class="mb-3">
+
+                                <label class="form-label fw-semibold">
+                                    Email
+                                </label>
+
+                                <input type="email" name="email" class="form-control" placeholder="example@gmail.com"
+                                    required>
+
+                            </div>
+
+
+                            <div class="mb-3">
+
+                                <label class="form-label fw-semibold">
+                                    Билдирүү
+                                </label>
+
+                                <textarea name="message" class="form-control" rows="4" placeholder="Билдирүүңүз..."
+                                    required></textarea>
+
+                            </div>
+
+
+                            <button type="submit" class="btn btn-danger w-100">
+                                Жөнөтүү
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="py-4">
+
+        <div class="container text-center">
+
+            <h5 class="fw-bold">
+                🇰🇬 Кыргызстан
+            </h5>
+
+            <p class="mb-3 text-secondary">
+                Кыргызстандын 7 облусу жөнүндө маалымат
+            </p>
+
+            <hr>
+
+            <p class="mb-0">
+                © 2026 Бардык укуктар корголгон
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- ================= BOOTSTRAP JS ================= -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+</body>
+
+</html>

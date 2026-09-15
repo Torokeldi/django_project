@@ -1,0 +1,113 @@
+{% load static %}
+
+<!doctype html>
+
+<html lang="ky">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'main/style.css' %}">
+    <title>Чүй тууралуу маалымат</title>
+</head>
+
+<body>
+
+
+    <h1>Чүй облусу</h1>
+
+    <p>
+        Чүй облусу — Кыргызстандын түндүк бөлүгүндө жайгашкан
+        аймак. Облустун борбору — Токмок шаары.
+    </p>
+
+    <h2>Чүй жөнүндө</h2>
+
+    <p>
+        Чүй облусу Кыргызстандын эң өнүккөн аймактарынын бири.
+        Бул жерде айыл чарбасы, өнөр жай жана соода жакшы өнүккөн.
+    </p>
+
+    <h2>Кызыктуу жерлери</h2>
+
+    <p>
+        Чүй облусунда Бурана мунарасы, Ала-Арча улуттук паркы
+        жана башка тарыхый жана жаратылыш жайлары бар.
+    </p>
+
+    <a href="{% url 'home' %}#regions" class="back-btn">
+        ← Облустарга кайтуу
+    </a>
+
+    <div class="districts">
+
+        <div class="district-card alamudun">
+            <h3>Аламүдүн району</h3>
+            <p>Аламүдүн району тууралуу маалымат</p>
+            <a href="{% url 'alamudun' %}">
+                Кененирээк →
+            </a>
+        </div>
+
+        <div class="district-card jaiyl">
+            <h3>Жайыл району</h3>
+            <p>Жайыл району тууралуу маалымат</p>
+            <a href="{% url 'zhaiyl' %}">
+                Кененирээк →
+            </a>
+        </div>
+
+        <div class="district-card kemin">
+            <h3>Кемин району</h3>
+            <p>Кемин району тууралуу маалымат</p>
+            <a href="{% url 'kemin' %}">
+                Кененирээк →
+            </a>
+        </div>
+
+        <div class="district-card moscow">
+            <h3>Москва району</h3>
+            <p>Москва району тууралуу маалымат</p>
+            <a href="{% url 'moscow' %}">
+                Кененирээк →
+            </a>
+        </div>
+
+        <div class="district-card panfilov">
+            <h3>Панфилов району</h3>
+            <p>Панфилов району тууралуу маалымат</p>
+            <a href="{% url 'panfilov' %}">
+                Кененирээк →
+            </a>
+        </div>
+
+        <div class="district-card sokuluk">
+            <h3>Сокулук району</h3>
+            <p>Сокулук району тууралуу маалымат</p>
+            <a href="{% url 'sokuluk' %}">
+                Кененирээк →
+            </a>
+        </div>
+
+        <div class="district-card ysykata">
+            <h3>Ысык-Ата району</h3>
+            <p>Ысык-Ата району тууралуу маалымат</p>
+            <a href="{% url 'ysyk_ata' %}">
+                Кененирээк →
+            </a>
+        </div>
+
+        <div class="district-card chui">
+            <h3>Чүй району</h3>
+            <p>Чүй району тууралуу маалымат</p>
+            <a href="{% url 'chuy_rayon' %}">
+                Кененирээк →
+            </a>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

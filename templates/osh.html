@@ -1,0 +1,106 @@
+{% load static %}
+
+<!doctype html>
+
+<html lang="ky">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'main/style.css' %}">
+    <title>Ош тууралуу маалымат</title>
+</head>
+
+<body>
+
+
+    <h1>Ош облусу</h1>
+
+    <p>
+        Ош облусу — Кыргызстандын түштүк бөлүгүндө жайгашкан
+        аймак. Облустун административдик борбору — Ош шаары.
+    </p>
+
+    <h2>Ош жөнүндө</h2>
+
+    <p>
+        Ош облусу кооз тоолору, өрөөндөрү, бай тарыхы жана
+        маданий мурастары менен белгилүү. Аймакта айыл чарбасы,
+        мал чарбачылыгы жана соода жакшы өнүккөн.
+    </p>
+
+    <h2>Кызыктуу жерлери</h2>
+
+    <p>
+        Ош облусунда Сулайман-Тоо, Өзгөн мунарасы, Алай өрөөнү
+        жана башка тарыхый жана жаратылыш жайлары бар.
+    </p>
+
+    <a href="{% url 'home' %}#regions" class="back-btn">
+        ← Облустарга кайтуу
+    </a>
+
+    <div class="districts">
+
+        <div class="district-card alay">
+            <h3>Алай району</h3>
+            <p>Алай району тууралуу маалымат</p>
+            <a href="{% url 'alai' %}">
+                Кененирээк →
+            </a>
+        </div>
+
+        <div class="district-card aravan">
+            <h3>Араван району</h3>
+            <p>Араван району тууралуу маалымат</p>
+            <a href="{% url 'aravan' %}">
+                Кененирээк →
+            </a>
+        </div>
+
+        <div class="district-card kara-kulja">
+            <h3>Кара-Кулжа району</h3>
+            <p>Кара-Кулжа району тууралуу маалымат</p>
+            <a href="{% url 'karakulja' %}">
+                Кененирээк →
+            </a>
+        </div>
+
+        <div class="district-card kara-suu">
+            <h3>Кара-Суу району</h3>
+            <p>Кара-Суу району тууралуу маалымат</p>
+            <a href="{% url 'kara_suu' %}">
+                Кененирээк →
+            </a>
+        </div>
+
+        <div class="district-card nоokat">
+            <h3>Ноокат району</h3>
+            <p>Ноокат району тууралуу маалымат</p>
+            <a href="{% url 'nookat' %}">
+                Кененирээк →
+            </a>
+        </div>
+
+        <div class="district-card uzgen">
+            <h3>Өзгөн району</h3>
+            <p>Өзгөн району тууралуу маалымат</p>
+            <a href="{% url 'ozgon' %}">
+                Кененирээк →
+            </a>
+        </div>
+
+        <div class="district-card chon-alay">
+            <h3>Чоң-Алай району</h3>
+            <p>Чоң-Алай району тууралуу маалымат</p>
+            <a href="{% url 'chon_alai' %}">
+                Кененирээк →
+            </a>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

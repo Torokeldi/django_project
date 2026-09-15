@@ -1,0 +1,501 @@
+/* ================================
+   GENERAL
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f6fa;
+    color: #212529;
+    line-height: 1.7;
+}
+
+
+/* ================================
+   MAIN CONTAINER
+================================ */
+
+body {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+
+/* ================================
+   TITLE
+================================ */
+
+h1 {
+    background: linear-gradient(135deg, #dc3545, #8b0000);
+    color: white;
+
+    padding: 60px 30px;
+    margin-bottom: 30px;
+
+    border-radius: 20px;
+
+    text-align: center;
+    font-size: 42px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+}
+
+
+/* ================================
+   PARAGRAPHS
+================================ */
+
+p {
+    background: white;
+
+    padding: 25px 30px;
+    margin-bottom: 25px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+
+    color: #6c757d;
+    font-size: 17px;
+
+    transition: 0.3s ease;
+}
+
+
+/* Paragraph hover */
+
+p:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+
+/* ================================
+   SECTION TITLES
+================================ */
+
+h2 {
+    background: white;
+
+    padding: 20px 25px;
+    margin-top: 35px;
+    margin-bottom: 15px;
+
+    border-left: 6px solid #dc3545;
+    border-radius: 12px;
+
+    color: #212529;
+
+    font-size: 28px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+}
+
+
+/* ================================
+   HOVER EFFECT
+================================ */
+
+h2 {
+    transition: 0.3s ease;
+}
+
+h2:hover {
+    transform: translateX(5px);
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 20px 15px;
+    }
+
+    h1 {
+        padding: 45px 20px;
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 23px;
+    }
+
+    p {
+        padding: 20px;
+        font-size: 16px;
+    }
+}
+
+
+/* ================================
+   SMALL MOBILE
+================================ */
+
+@media (max-width: 480px) {
+
+    h1 {
+        font-size: 27px;
+        padding: 35px 15px;
+    }
+
+    h2 {
+        font-size: 21px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+}
+
+/* ================================
+   BACK BUTTON
+================================ */
+
+.back-btn {
+    display: inline-block;
+
+    margin-top: 10px;
+    padding: 12px 28px;
+
+    background: linear-gradient(135deg, #dc3545, #8b0000);
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+
+    transition: 0.3s ease;
+}
+
+.back-btn:hover {
+    color: white;
+    transform: translateY(-3px);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+
+/* ================================
+   BATKEN DISTRICTS
+================================ */
+
+.district-page {
+    width: 100%;
+    text-align: center;
+}
+
+.district-page .intro {
+    margin-bottom: 30px;
+}
+
+
+/* ================================
+   DISTRICT CARDS
+================================ */
+
+.district-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.district-card {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    border: 1px solid #eeeeee;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+
+    transition: 0.3s ease;
+
+    text-align: center;
+}
+
+.district-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.16);
+}
+
+
+/* ================================
+   DISTRICT ICON
+================================ */
+
+.district-icon {
+    font-size: 50px;
+
+    margin-bottom: 10px;
+}
+
+
+/* ================================
+   DISTRICT TITLE
+================================ */
+
+.district-card h2 {
+    background: none;
+
+    padding: 0;
+
+    margin: 10px 0 15px;
+
+    border-left: none;
+
+    box-shadow: none;
+
+    color: #8b0000;
+
+    font-size: 27px;
+}
+
+.district-card h2:hover {
+    transform: none;
+}
+
+
+/* ================================
+   DISTRICT TEXT
+================================ */
+
+.district-card p {
+    background: none;
+
+    padding: 0;
+
+    margin-bottom: 20px;
+
+    box-shadow: none;
+
+    color: #6c757d;
+
+    font-size: 16px;
+
+    min-height: 110px;
+}
+
+.district-card p:hover {
+    transform: none;
+
+    box-shadow: none;
+}
+
+
+/* ================================
+   DISTRICT BUTTON
+================================ */
+
+.district-btn {
+    display: inline-block;
+
+    padding: 12px 25px;
+
+    background: linear-gradient(
+        135deg,
+        #dc3545,
+        #8b0000
+    );
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+
+    transition: 0.3s ease;
+}
+
+.district-btn:hover {
+    color: white;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.20);
+}
+
+
+/* ================================
+   CITY CARD
+================================ */
+
+.city-card {
+    border: 2px solid #dc3545;
+}
+
+.city-card .district-icon {
+    font-size: 55px;
+}
+
+
+/* ================================
+   HOME BUTTON
+================================ */
+
+.home-btn {
+    display: inline-block;
+
+    margin-top: 10px;
+
+    padding: 12px 28px;
+
+    background: white;
+
+    color: #8b0000;
+
+    text-decoration: none;
+
+    border: 2px solid #dc3545;
+
+    border-radius: 30px;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+.home-btn:hover {
+    background: linear-gradient(
+        135deg,
+        #dc3545,
+        #8b0000
+    );
+
+    color: white;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 768px) {
+
+    .district-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .district-card {
+        padding: 25px 20px;
+    }
+
+    .district-card h2 {
+        font-size: 24px;
+    }
+
+    .district-card p {
+        min-height: auto;
+    }
+
+    .district-icon {
+        font-size: 45px;
+    }
+
+}
+
+
+/* ================================
+   SMALL MOBILE
+================================ */
+
+@media (max-width: 480px) {
+
+    .district-card {
+        padding: 22px 17px;
+    }
+
+    .district-card h2 {
+        font-size: 22px;
+    }
+
+    .district-card p {
+        font-size: 15px;
+    }
+
+    .district-btn,
+    .home-btn,
+    .back-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+}
+
+.districts {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.district-card {
+    width: 280px;
+    min-height: 180px;
+    padding: 25px;
+    border-radius: 15px;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.district-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.district-card p {
+    margin-bottom: 20px;
+}
+
+.district-card a {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background: #dc3545;
+    color: white;
+    text-decoration: none;
+}
+
+.district-card a:hover {
+    background: #8b0000;
+}

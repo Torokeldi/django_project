@@ -1,0 +1,91 @@
+{% load static %}
+
+<!doctype html>
+
+<html lang="ky">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'main/style.css' %}">
+    <title>Нарын тууралуу маалымат</title>
+</head>
+
+<body>
+
+
+    <h1>Нарын облусу</h1>
+
+    <p>
+        Нарын облусу — Кыргызстандын борбордук бөлүгүндө жайгашкан
+        аймак. Облустун административдик борбору — Нарын шаары.
+    </p>
+
+    <h2>Нарын жөнүндө</h2>
+
+    <p>
+        Нарын облусу бийик тоолору, кең өрөөндөрү жана кооз
+        жаратылышы менен белгилүү. Аймакта мал чарбачылыгы
+        кеңири өнүккөн.
+    </p>
+
+    <h2>Кызыктуу жерлери</h2>
+
+    <p>
+        Нарын облусунда Сон-Көл, Таш-Рабат жана башка тарыхый
+        жана жаратылыш жайлары бар. Бул аймак туризм үчүн
+        чоң мүмкүнчүлүктөргө ээ.
+    </p>
+
+    <a href="{% url 'home' %}#regions" class="back-btn">
+        ← Облустарга кайтуу
+    </a>
+
+    <div class="districts">
+
+        <div class="district-card ak-talaa">
+            <h3>Ак-Талаа району</h3>
+            <p>Ак-Талаа району тууралуу маалымат</p>
+            <a href="{% url 'ak_talaa' %}">
+                Кененирээк →
+            </a>
+        </div>
+
+        <div class="district-card at-bashy">
+            <h3>Ат-Башы району</h3>
+            <p>Ат-Башы району тууралуу маалымат</p>
+            <a href="{% url 'at_bashy' %}">
+                Кененирээк →
+            </a>
+        </div>
+
+        <div class="district-card jumgal">
+            <h3>Жумгал району</h3>
+            <p>Жумгал району тууралуу маалымат</p>
+            <a href="{% url 'jumgal' %}">
+                Кененирээк →
+            </a>
+        </div>
+
+        <div class="district-card kochkor">
+            <h3>Кочкор району</h3>
+            <p>Кочкор району тууралуу маалымат</p>
+            <a href="{% url 'kochkor' %}">
+                Кененирээк →
+            </a>
+        </div>
+
+        <div class="district-card naryn">
+            <h3>Нарын району</h3>
+            <p>Нарын району тууралуу маалымат</p>
+            <a href="{% url 'naryn_rayon' %}">
+                Кененирээк →
+            </a>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

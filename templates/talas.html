@@ -1,0 +1,82 @@
+{% load static %}
+
+<!doctype html>
+
+<html lang="ky">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'main/style.css' %}">
+    <title>Талас тууралуу маалымат</title>
+</head>
+
+<body>
+
+
+    <h1>Талас облусу</h1>
+
+    <p>
+        Талас облусу — Кыргызстандын түндүк-батышында жайгашкан
+        аймак. Облустун административдик борбору — Талас шаары.
+    </p>
+
+    <h2>Талас жөнүндө</h2>
+
+    <p>
+        Талас облусу кең өрөөндөрү, тоолору жана бай тарыхы менен
+        белгилүү. Аймакта айыл чарбасы, анын ичинде дан эгиндерин
+        жана буурчак өсүмдүктөрүн өстүрүү жакшы өнүккөн.
+    </p>
+
+    <h2>Кызыктуу жерлери</h2>
+
+    <p>
+        Талас облусунда Манас Ордо комплекси, Беш-Таш улуттук
+        паркы жана башка тарыхый жана жаратылыш жайлары бар.
+    </p>
+
+    <a href="{% url 'home' %}#regions" class="back-btn">
+        ← Облустарга кайтуу
+    </a>
+
+    <div class="districts">
+
+        <div class="district-card bakai-ata">
+            <h3>Бакай-Ата району</h3>
+            <p>Бакай-Ата району тууралуу маалымат</p>
+            <a href="{% url 'bakai_ata' %}">
+                Кененирээк →
+            </a>
+        </div>
+
+        <div class="district-card aitmatov">
+            <h3>Айтматов району</h3>
+            <p>Айтматов району тууралуу маалымат</p>
+            <a href="{% url 'aitmatov' %}">
+                Кененирээк →
+            </a>
+        </div>
+
+        <div class="district-card manas">
+            <h3>Манас району</h3>
+            <p>Манас району тууралуу маалымат</p>
+            <a href="{% url 'manas' %}">
+                Кененирээк →
+            </a>
+        </div>
+
+        <div class="district-card talas_rayon">
+            <h3>Талас району</h3>
+            <p>Талас району тууралуу маалымат</p>
+            <a href="{% url 'talas_rayon' %}">
+                Кененирээк →
+            </a>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

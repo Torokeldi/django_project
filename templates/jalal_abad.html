@@ -1,0 +1,115 @@
+{% load static %}
+
+<!doctype html>
+
+<html lang="ky">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'main/style.css' %}">
+    <title>Жалал-Абад тууралуу маалымат</title>
+</head>
+
+<body>
+
+
+    <h1>Жалал-Абад облусу</h1>
+
+    <p>
+        Жалал-Абад облусу — Кыргызстандын түштүк-батышында жайгашкан
+        аймак. Облустун административдик борбору — Жалал-Абад шаары.
+    </p>
+
+    <h2>Жалал-Абад жөнүндө</h2>
+
+    <p>
+        Жалал-Абад облусу өзүнүн кооз жаратылышы, минералдык булактары
+        жана тарыхый жерлери менен белгилүү. Аймакта тоолор, токойлор
+        жана өрөөндөр кездешет.
+    </p>
+
+    <h2>Кызыктуу жерлери</h2>
+
+    <p>
+        Жалал-Абад облусунда Арстанбап, Сары-Челек жана башка
+        кооз жаратылыш аймактары жайгашкан. Бул жерлер эс алуу
+        жана туризм үчүн өзгөчө мааниге ээ.
+    </p>
+
+    <a href="{% url 'home' %}#regions" class="back-btn">
+        ← Облустарга кайтуу
+    </a>
+
+    <div class="districts">
+
+        <div class="district-card aksy">
+            <h3>Аксы району</h3>
+            <p>Аксы району тууралуу маалымат</p>
+            <a href="{% url 'aqsy' %}">
+                Кененирээк →
+            </a>
+        </div>
+
+        <div class="district-card ala-buka">
+            <h3>Ала-Бука району</h3>
+            <p>Ала-Бука району тууралуу маалымат</p>
+            <a href="{% url 'ala_buka' %}">
+                Кененирээк →
+            </a>
+        </div>
+
+        <div class="district-card bazar-korgon">
+            <h3>Базар-Коргон району</h3>
+            <p>Базар-Коргон району тууралуу маалымат</p>
+            <a href="{% url 'bazar_korgon' %}">
+                Кененирээк →
+            </a>
+        </div>
+
+        <div class="district-card nookat">
+            <h3>Ноокен району</h3>
+            <p>Ноокен району тууралуу маалымат</p>
+            <a href="{% url 'nooken' %}">
+                Кененирээк →
+            </a>
+        </div>
+
+        <div class="district-card suzak">
+            <h3>Сузак району</h3>
+            <p>Сузак району тууралуу маалымат</p>
+            <a href="{% url 'suzak' %}">
+                Кененирээк →
+            </a>
+        </div>
+
+        <div class="district-card tokto-gul">
+            <h3>Токтогул району</h3>
+            <p>Токтогул району тууралуу маалымат</p>
+            <a href="{% url 'toktogul' %}">
+                Кененирээк →
+            </a>
+        </div>
+
+        <div class="district-card toguz-toro">
+            <h3>Тогуз-Торо району</h3>
+            <p>Тогуз-Торо району тууралуу маалымат</p>
+            <a href="{% url 'toguz_toro' %}">
+                Кененирээк →
+            </a>
+        </div>
+
+        <div class="district-card chatkal">
+            <h3>Чаткал району</h3>
+            <p>Чаткал району тууралуу маалымат</p>
+            <a href="{% url 'chatkal' %}">
+                Кененирээк →
+            </a>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
